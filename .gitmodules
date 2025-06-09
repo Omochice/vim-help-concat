@@ -1,0 +1,6 @@
+[submodule "neovim"]
+	path = neovim
+	url = https://github.com/neovim/neovim
+[submodule "vim"]
+	path = vim
+	url = https://github.com/vim/vim
