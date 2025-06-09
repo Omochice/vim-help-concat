@@ -105,6 +105,8 @@
               pkgs.actionlint
               pkgs.ghalint
             ];
+          check-renovate-config =
+            "renovate-config-validator renovate.json5" |> runAs "check-renovate-config" [ pkgs.renovate ];
         };
         packages = {
           inherit vim neovim;
