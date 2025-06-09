@@ -23,8 +23,9 @@ jobs:
             experimental-features = nix-command flakes pipe-operators
             access-tokens = github.com=${{ secrets.GITHUB_TOKEN }}
       - run: nix build .?submodules=1#default
-      - run: mkdir dist
-      - run: mv result/* dist/
+      - run: |
+          cp -rL result ./dist
+          chmod -R u+rwX ./dist
       - name: Upload dist as pages-artifact
         id: deployment
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
