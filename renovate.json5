@@ -5,6 +5,7 @@
   ],
   "git-submodules": {
     enabled: true,
+    automerge: true,
   },
   lockFileMaintenance: {
     enabled: true,
